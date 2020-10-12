@@ -1,10 +1,8 @@
 import React from 'react'
 import NavBarLinks from './NavBarLinks'
 import { makeStyles } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import Grid from '@material-ui/core/Grid';
-import Button from '@material-ui/core/Button';
+import { AppBar, Toolbar, Grid, Button, MenuItem } from '@material-ui/core';
+import nasaLogo from '../kisspng-logo-nasa-insignia-vector-graphics-portable-networ-vasper-5c0bc49343c935.1278996415442750912777.png'
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,6 +16,9 @@ const useStyles = makeStyles((theme) => ({
     },
     button: {
         marginRight: theme.spacing(2),
+    },
+    img: {
+        justifySelf: 'end'
     }
 }))
 
@@ -30,12 +31,17 @@ export default function NavBar() {
         <Grid item className={classes.root} xs={12} container>
             <AppBar position="fixed" className={classes.bar}>
                 <Toolbar>
-                    {navLinks.map(n => 
-                        <Button className={classes.button} color="inherit">
-                            <NavBarLinks link={n} />
-                        </Button>)}
-                </Toolbar>
-            </AppBar>
+                    <MenuItem>
+                        {navLinks.map(n => 
+                            <Button className={classes.button} color="inherit">
+                                <NavBarLinks link={n} />
+                            </Button>)}
+                    </MenuItem>
+                    <MenuItem>
+                        <img className={classes.img} height='60px' src={nasaLogo}/>
+                    </MenuItem>
+                </Toolbar>   
+            </AppBar>   
         </Grid>
     )
 }

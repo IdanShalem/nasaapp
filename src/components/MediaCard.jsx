@@ -2,13 +2,7 @@ import React from 'react';
 import {Link, useLocation} from 'react-router-dom'
 import Media from './Media'
 import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardHeader from '@material-ui/core/CardHeader';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Grid from '@material-ui/core/Grid';
-import IconButton from '@material-ui/core/IconButton'
+import { Card, CardHeader, CardActionArea, CardActions, CardContent, Grid, IconButton } from '@material-ui/core';
 import ThumbUpAltIcon from '@material-ui/icons/ThumbUpAlt'
 import ThumbDownIcon from '@material-ui/icons/ThumbDown'
 import Typography from '@material-ui/core/Typography';
@@ -19,15 +13,14 @@ const useStyles = makeStyles({
         marginBottom: '20px'
     },
     cards: {
-        boxShadow: '0px 0px 1px white'
+        border: '0.1px groove #bca9f3'
     },
     actions: {
         justifyContent: 'center'
     },
     img: {
         width: '100%',
-        height: '40vh',
-        boxShadow: '0px 1px 5px black'
+        height: '40vh'
     }
   });
 

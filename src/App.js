@@ -4,9 +4,7 @@ import './App.css';
 import NavBar from './components/NavBar'
 import Container from './components/Container'
 import { makeStyles } from '@material-ui/core/styles';
-import Grid from '@material-ui/core/Grid';
-import Snackbar from '@material-ui/core/Snackbar'
-import SnackbarContent from "@material-ui/core/SnackbarContent"
+import { Grid, Snackbar, SnackbarContent } from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   root: {

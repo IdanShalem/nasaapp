@@ -1,11 +1,9 @@
 import React, {useState} from 'react';
 import MediaCard from './MediaCard'
 import SearchBar from './SearchBar'
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardMedia from '@material-ui/core/CardMedia';
+import { Grid, Card, CardContent, CardMedia } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import searchPic from '../istockphoto-1141690154-170667a.jpg'
 
 const axios = require('axios')
 const useStyles = makeStyles({
@@ -75,7 +73,7 @@ export default function Search(props) {
                                 :   <CardMedia
                                         component="img"
                                         width='100%'
-                                        image="https://media.istockphoto.com/vectors/cartoon-scifi-space-background-vector-id1141690154?k=6&m=1141690154&s=170667a&w=0&h=qpbczlazLlAlNzB10GC3oiMPaX-MuH86vyzZSm9xpTM="
+                                        image={searchPic}
                                     />
                         }
                     </CardContent>

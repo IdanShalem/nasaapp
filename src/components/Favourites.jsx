@@ -1,10 +1,7 @@
 import React, {useState, useEffect, Fragment} from 'react';
 import MediaCard from './MediaCard'
-import Grid from '@material-ui/core/Grid';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
+import { Grid, Card, CardContent, CardHeader } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import CardHeader from '@material-ui/core/CardHeader';
 
 const useStyles = makeStyles({
     root1: {

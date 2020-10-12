@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import MediaCard from './MediaCard'
-import Grid from '@material-ui/core/Grid';
+import { Grid, CircularProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import CircularProgress from '@material-ui/core/CircularProgress';
 
 const axios = require('axios')
 const apiKey = require('../API_Key').ApiKey
