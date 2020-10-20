@@ -26,8 +26,8 @@ export default function NavBar(props) {
     } else {
         return (
             <Link 
-                to={`/${props.link.toLowerCase()}`} 
-                className={`${classes.links} ${location.includes(props.link.toLowerCase()) && classes.pressed}`}
+                to={`/${props.link.replace(" ", "").toLowerCase()}`} 
+                className={`${classes.links} ${location.includes(props.link.toLowerCase().replace(" ", "")) && classes.pressed}`}
             >
                 {props.link}
             </Link>

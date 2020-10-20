@@ -3,6 +3,8 @@ import {Route} from 'react-router-dom'
 import Home from './Home'
 import Search from './Search'
 import Favourites from './Favourites'
+import Login from './auth/Login'
+import Register from './auth/Register'
 
 
 const axios = require('axios')
@@ -11,7 +13,7 @@ export default function Container(props) {
 
     const [favouriteImages, setFavouriteImages] = useState([])
     const getAllImages = async () => {
-        axios.get('http://localhost:3001/images')
+        axios.get('http://localhost:3001/image')
             .then(images => {
                 images.data.forEach(i => i.isSaved = true)
                 setFavouriteImages(images.data)
@@ -28,9 +30,9 @@ export default function Container(props) {
         if(imageFound) {
             imageFound.isSaved = true
             setFavouriteImages(allImages)
-            await axios.post(`http://localhost:3001/image`, image)
+            await axios.post(`http://localhost:3001/image/save`, image)
         } else {
-            await axios.post(`http://localhost:3001/image`, image)
+            await axios.post(`http://localhost:3001/image/save`, image)
             getAllImages()
         }
         props.handleClick('Saved')
@@ -47,7 +49,7 @@ export default function Container(props) {
 
     return (
         <Fragment>
-            <Route exact path='/' component={Home}/>
+            <Route exact path='/home' component={Home}/>
             <Route exact path='/search' 
                 exact render={() => 
                     <Search 
@@ -73,6 +75,16 @@ export default function Container(props) {
                     handleSave={handleSave}
                     handleDelete={handleDelete}
                     getAllImages={getAllImages}
+                />}/>
+            <Route path='/login' 
+                  exact render={({ match }) => 
+                  <Login 
+                    match={match} 
+                />}/>
+            <Route path='/register' 
+                  exact render={({ match }) => 
+                  <Register 
+                    match={match} 
                 />}/>
         </Fragment>
     )

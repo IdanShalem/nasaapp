@@ -1,8 +1,14 @@
 const   express     = require('express'),
         app         = express(),
-        port        = 3001,
+        port        = process.env.PORT || 3001,
         mongoose    = require('mongoose'),
-        api         = require('./server/routes/api')
+        user        = require('./server/routes/User'),
+        cors        = require('cors'),
+        image = require('./server/routes/Image')
+        
+
+require('dotenv').config()
+
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: false }))
@@ -15,6 +21,7 @@ app.use(function (req, res, next) {
 
     next()
 })
-app.use('/', api)
+app.use('/image', image)
+app.use('/user', user)
 
 app.listen(port, () => console.log('server is up'))

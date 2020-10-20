@@ -3,7 +3,7 @@ const   express     = require('express'),
         Image = require('../models/Image')
 
 
-router.get('/images/:imgId?' , async function(req, res) {
+router.get('/:imgId?' , async function(req, res) {
     const {imgId} = req.params
     let result
     imgId
@@ -12,13 +12,13 @@ router.get('/images/:imgId?' , async function(req, res) {
     res.send(result)
 })
 
-router.post('/image', async function(req, res) {  
+router.post('/save', async function(req, res) {  
     const image = new Image(req.body)
     await image.save()
     res.send(image)
 })
 
-router.delete('/image/:imageId', async function(req, res) {
+router.delete('/:imageId', async function(req, res) {
     const { imageId } = req.params
     const image = await Image.findByIdAndDelete(imageId)
     res.send(image)
