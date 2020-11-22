@@ -7,7 +7,8 @@ NASA App is a mobile application for people who loves space. The application giv
 2. Open the directory in a code editor.
 3. Open the terminal inside the main directory.
 4. Run `npm install` and than `npm start`.
-5. open another terminal and run `nodemon server`.
+5. Open another terminal and run `mongod`.
+6. Open another terminal and run `nodemon server`.
 
 ## Screen shots:
 
