@@ -6,11 +6,6 @@ const imageSchema = new Schema ({
     title: String,
     imgUrl: String,
     description: String,
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
-        required: true,
-        ref: 'User'
-    }
 })
 
 const Image = mongoose.model('image' , imageSchema)
