@@ -3,7 +3,7 @@
 NASA App is a mobile application for people who loves space. The application gives the users NASA's best pictures and videos with short information. The users will be able to get NASA's picture of the day, search for pictures and videos, and save their favourites pictures and videos.
 
 ## Running the project:
-1: Clone this repository into a local directory.
+1. Clone this repository into a local directory.
 2. Open the directory in a code editor.
 3. Open the terminal inside the main directory.
 4. Run `npm install` and than `npm start`.
