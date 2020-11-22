@@ -13,14 +13,17 @@ NASA App is a mobile application for people who loves space. The application giv
 
 ### Home Page.
 In this page the user gets NASA's picture of the day with information about it.
+
 ![alt text](https://github.com/IdanShalem/nasaapp/blob/master/images/homePage.jpg "Home Page")
 
 ### Search.
 In this page the user can search for NASA's images and save his favourite images.
+
 ![alt text](https://github.com/IdanShalem/nasaapp/blob/master/images/search.jpg "Search")
 
 ### Favourites.
 In this page the user can see all of his favourite images. By clicking an image a short information about the image will be shown.
+
 ![alt text](https://github.com/IdanShalem/nasaapp/blob/master/images/favourites.jpg "Favourites")
 
 ## Technologies:
