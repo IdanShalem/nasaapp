@@ -37,7 +37,7 @@ export default function Favourites(props) {
                     setImageDb(image.data)
                 })
         } 
-    })
+    }, [props.match])
 
     useEffect(() => {
         props.getAllImages()

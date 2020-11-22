@@ -25,32 +25,32 @@ const useStyles = makeStyles({
   });
 
 export default function MediaCard(props) {
-    const i = props.image
+    const { image } = props
     const classes = useStyles();
     let location = useLocation().pathname
 
     const handleSave = () => {
-        i.isSaved = true
+        image.isSaved = true
         props.handleSave(i)
     }
 
     const handleDelete = () => {
-        i.isSaved = false
+        image.isSaved = false
         props.handleDelete(i._id)
     }
 
     if(location === '/' || location.includes('favourite/')) {
         return(
-            <Grid item xs={11} container id={i.key}>
+            <Grid item xs={11} container id={image.key}>
                 <Card className={classes.card}>
                     <CardActionArea>
-                        <Media link={i.imgUrl}/>
+                        <Media link={image.imgUrl}/>
                         <CardHeader 
-                            title={i.title}
+                            title={image.title}
                         />
                         <CardContent>
                             <Typography variant="body1" color="textSecondary" component="p">
-                                {i.description}
+                                {image.description}
                             </Typography>
                         </CardContent>
                     </CardActionArea>
@@ -59,20 +59,20 @@ export default function MediaCard(props) {
         )
     } else {
         return (
-                <Card className={`${classes.card} ${classes.cards}`} id={i.key}>
+                <Card className={`${classes.card} ${classes.cards}`} id={image.key}>
                     <CardActionArea>
                         {location.includes('search') 
-                            ?   <img className={classes.img} src={i.imgUrl} />
+                            ?   <img className={classes.img} src={image.imgUrl} />
                             :   <Link to={`/favourite/${i._id}`}>
-                                    <img className={classes.img} src={i.imgUrl}/>
+                                    <img className={classes.img} src={image.imgUrl}/>
                                 </Link>
                         }
                         <CardHeader 
-                            title={i.title}
+                            title={image.title}
                         />
                     </CardActionArea>
                     <CardActions className={classes.actions}>
-                        {i.isSaved                        
+                        {image.isSaved                        
                             ?   <IconButton onClick={handleDelete} className={classes.icon}> <ThumbDownIcon /> </IconButton>
                             :   <IconButton onClick={handleSave} className={classes.icon}> <ThumbUpAltIcon/> </IconButton>
                         }

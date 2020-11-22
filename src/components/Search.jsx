@@ -47,12 +47,7 @@ export default function Search(props) {
             })
     }
 
-    const checkIfSaved = (imgId) => {
-        if(props.favouriteImages.find(f => f._id === imgId)) {
-            return true
-        }
-        return false
-    }
+    const checkIfSaved = imgId => props.favouriteImages.find(f => f._id === imgId)
 
     return (
         <Grid item className={classes.root} container xs={11} alignItems='center'>

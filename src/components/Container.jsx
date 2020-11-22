@@ -3,8 +3,7 @@ import {Route} from 'react-router-dom'
 import Home from './Home'
 import Search from './Search'
 import Favourites from './Favourites'
-
-const axios = require('axios')
+import axios from 'axios'
 
 export default function Container(props) {
 
