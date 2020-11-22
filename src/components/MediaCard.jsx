@@ -31,12 +31,12 @@ export default function MediaCard(props) {
 
     const handleSave = () => {
         image.isSaved = true
-        props.handleSave(i)
+        props.handleSave(image)
     }
 
     const handleDelete = () => {
         image.isSaved = false
-        props.handleDelete(i._id)
+        props.handleDelete(image._id)
     }
 
     if(location === '/' || location.includes('favourite/')) {
@@ -63,7 +63,7 @@ export default function MediaCard(props) {
                     <CardActionArea>
                         {location.includes('search') 
                             ?   <img className={classes.img} src={image.imgUrl} />
-                            :   <Link to={`/favourite/${i._id}`}>
+                            :   <Link to={`/favourite/${image._id}`}>
                                     <img className={classes.img} src={image.imgUrl}/>
                                 </Link>
                         }
