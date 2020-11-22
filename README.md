@@ -1,4 +1,4 @@
-# CRP APP
+# NASA APP
 
 NASA App is a mobile application for people who loves space. The application gives the users NASA's best pictures and videos with short information. The users will be able to get NASA's picture of the day, search for pictures and videos, and save their favourites pictures and videos.
 
@@ -13,37 +13,30 @@ NASA App is a mobile application for people who loves space. The application giv
 
 ### Home Page.
 In this page the user gets NASA's picture of the day with information about it.
-![alt text](https://github.com/IdanShalem/CRM-APP/blob/master/screenshots/Clients%20list.jpg "Clients list")
+![alt text](https://github.com/IdanShalem/nasaapp/blob/master/images/homePage.jpg "Home Page")
 
-### Add or Update.
-In this page the manager can add a new client to his list and update email type or decalre a sell.
-![alt text](https://github.com/IdanShalem/CRM-APP/blob/master/screenshots/Add%20or%20update%20client.jpg "Add or update")
+### Search.
+In this page the user can search for NASA's images and save his favourite images.
+![alt text](https://github.com/IdanShalem/nasaapp/blob/master/images/search.jpg "Search")
 
-### Analytics Dashboard.
-In this page the manager can see all of the statistics about his clients and workers.
-![alt text](https://github.com/IdanShalem/CRM-APP/blob/master/screenshots/Analytics%20dashboard.jpg "Analytics dashboard")
+### Favourites.
+In this page the user can see all of his favourite images. By clicking an image a short information about the image will be shown.
+![alt text](https://github.com/IdanShalem/nasaapp/blob/master/images/favourites.jpg "Favourites")
 
 ## Technologies:
 
 ### Client-side:
 * React.JS
-* MobX
-* MobX-React
 * Axios
 * Material-UI
-* Recharts
 
 ### Server-side:
 * Node.JS
 * Express
-* Sequielize
-* MySQL
+* Mongoose
+* MongoDB
 
 ## What's next:
-1. Adding more parameters for flitering and searching.
-2. The ability to sort the table by each column by a 
-3. More options for charts and analytics.
-4. Emailing service from the app.
-
-
+1. Adding user model and user authentication.
+2. responsive design for computer and mobile.
 
